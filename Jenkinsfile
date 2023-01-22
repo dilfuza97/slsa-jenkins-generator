@@ -23,7 +23,7 @@ pipeline {
                      //TODO: replace with real build command
 //                    sh 'echo "hello world" > output.txt'
                     sh """
-                    cat << EOF > /tmp/yourfilehere
+                    cat << EOF > output.json
 These contents will be written to the file.
         This line is indented.
 EOF
