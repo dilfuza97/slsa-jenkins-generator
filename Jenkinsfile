@@ -3,11 +3,11 @@ def artifact_name
 
 pipeline {
     agent any
-    tools {
-        git "git"
-        go 'go 1.18'
+//     tools {
+//         git "git"
+//         go 'go 1.18'
 
-    }
+//     }
 
     environment {
         CREDENTIAL_ID = '52df5492-8277-4db2-b0bc-fd85aa25b9f2'
