@@ -18,7 +18,7 @@ pipeline {
         stage('build target ') {
             steps {
                 script {
-                    git branch: "${branch}", credentialsId: "$CREDENTIAL_ID", url: "https://github.com/slsa-framework/slsa-jenkins-generator.git"
+                    git branch: "main", credentialsId: "$CREDENTIAL_ID", url: "https://github.com/slsa-framework/slsa-jenkins-generator.git"
 
                      //TODO: replace with real build command
                     sh 'echo "hello world" > output.txt'
