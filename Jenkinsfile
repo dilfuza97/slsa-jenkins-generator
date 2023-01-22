@@ -10,7 +10,7 @@ pipeline {
     }
 
     environment {
-        CREDENTIAL_ID = 'GIT_ACCOUNT'
+        CREDENTIAL_ID = '52df5492-8277-4db2-b0bc-fd85aa25b9f2'
         Repository_Generator = 'https://github.com/Samsung/slsa-jenkins-generator'
     }
 
@@ -18,9 +18,7 @@ pipeline {
         stage('build target ') {
             steps {
                 script {
-                    branch = "${env.payload_ref}"
-                    branch = "${branch}".split("refs/heads/")[1]
-                    git branch: "${branch}", credentialsId: "$CREDENTIAL_ID", url: "$env.payload_repository_clone_url"
+                    git branch: "${branch}", credentialsId: "$CREDENTIAL_ID", url: "https://github.com/slsa-framework/slsa-jenkins-generator.git"
 
                      //TODO: replace with real build command
                     sh 'echo "hello world" > output.txt'
