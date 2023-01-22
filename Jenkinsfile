@@ -30,7 +30,7 @@ pipeline {
 
         stage('generate provenance') {
             steps {
-              
+              sh "ls -ahl"
                         // 'run generator via docker'
                         echo 'run generator via docker'
                         sh "docker build . -t scia:slsa-generator"
