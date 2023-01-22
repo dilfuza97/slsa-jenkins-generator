@@ -21,7 +21,14 @@ pipeline {
                     git branch: "main", credentialsId: "$CREDENTIAL_ID", url: "https://github.com/dilfuza97/slsa-jenkins-generator.git"
 
                      //TODO: replace with real build command
-                    sh 'echo "hello world" > output.txt'
+//                    sh 'echo "hello world" > output.txt'
+                    sh """
+                    cat << EOF > /tmp/yourfilehere
+These contents will be written to the file.
+        This line is indented.
+EOF
+                    """
+                    sh "cat output.json"
                     artifact_path = sh(script: 'pwd', returnStdout: true).trim()
                     artifact_name = "output.txt"
                 }
