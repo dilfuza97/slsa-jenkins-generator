@@ -29,7 +29,7 @@ EOF
                     """
                     sh "cat output.json"
                     artifact_path = sh(script: 'pwd', returnStdout: true).trim()
-                    artifact_name = "output.txt"
+                    artifact_name = "output.json"
                 }
             }
         }
