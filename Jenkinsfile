@@ -24,8 +24,7 @@ pipeline {
 //                    sh 'echo "hello world" > output.txt'
                     sh """
                     cat << EOF > output.json
-These contents will be written to the file.
-        This line is indented.
+'{"name":"John", "age":30, "car":null}'
 EOF
                     """
                     sh "cat output.json"
