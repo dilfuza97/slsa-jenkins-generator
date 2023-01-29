@@ -53,7 +53,7 @@ EOF
                         echo 'run generator via docker'
                         sh "docker build . -t scia:slsa-generator"
                         sh "printenv > ./envlist && docker run --env-file ./envlist -v \"${artifact_path}\":\"/artifacts\" scia:slsa-generator -a artifacts/${artifact_name} -o artifacts"
-                    
+                        sh "cat output.json"
                 
             }
         }
