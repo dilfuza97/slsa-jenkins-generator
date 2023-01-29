@@ -24,7 +24,14 @@ pipeline {
 //                    sh 'echo "hello world" > output.txt'
                     sh """
                     cat << EOF > output.json
-'{"name":"John", "age":30, "car":null}'
+{
+	"actor": "",
+	"event_payload": "",
+	"build_url": "test",
+	"payload_repository_git_url": "prgu",
+	"payload_after": "1234",
+	"eventname": "somename"
+}
 EOF
                     """
                     sh "cat output.json"
